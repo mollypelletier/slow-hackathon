@@ -1,5 +1,6 @@
 import { auth } from "@/auth"
 import { InfoIcon } from "lucide-react"
+import Link from "next/link"
 import { Suspense } from "react"
 
 async function UserDetails() {
@@ -26,6 +27,11 @@ export default function ProtectedPage() {
       <Suspense fallback={<div className="text-sm text-muted-foreground">Loading...</div>}>
         <UserDetails />
       </Suspense>
+      <div>
+        <Link href="/meme-generator" className="text-primary hover:underline">
+          Try the Cat Meme Generator →
+        </Link>
+      </div>
     </div>
   )
 }
