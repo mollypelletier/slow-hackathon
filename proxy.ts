@@ -10,7 +10,7 @@ export default auth((req) => {
 
   if (!req.auth && !isPublic) {
     const signInUrl = new URL("/sign-in", req.nextUrl.origin)
-    signInUrl.searchParams.set("callbackUrl", req.nextUrl.href)
+    signInUrl.searchParams.set("callbackUrl", new URL("/meme-generator", req.nextUrl.origin).href)
     return Response.redirect(signInUrl)
   }
 })

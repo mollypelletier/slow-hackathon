@@ -40,7 +40,7 @@ export async function signUp(formData: FormData) {
     await signIn("credentials", {
       email,
       password,
-      redirectTo: "/protected",
+      redirectTo: "/meme-generator",
     })
   } catch (error) {
     if (error instanceof AuthError) {
@@ -58,7 +58,7 @@ export async function signInWithCredentials(formData: FormData) {
     await signIn("credentials", {
       email,
       password,
-      redirectTo: "/protected",
+      redirectTo: "/meme-generator",
     })
   } catch (error) {
     if (error instanceof AuthError) {
